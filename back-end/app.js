@@ -78,5 +78,21 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.use("/static", express.static("public"))
+
+app.get("/about-us", (req, res) => {
+  res.json({
+    title: "About Us",
+    paragraphs: [
+      "Hello! My name is Mohiuddin Syed and I'm junior studying Computer Science at NYU CAS!",
+      "I'm interested in traveling, eating new foods, video games, and sports.",
+      "In my free time, I like to play and watch sports, video games, analyzing the latest trends with data, build projects, and explore the world!",
+      "After this course I hope to gain a better understanding of how to build Full-Stack applications and be more familiar at using GitHub, Git, and Terminal commands"
+    ],
+    imageUrl: '${req.protocol:://${req.get("host")}/static/images/mohiuddin_agile_me.jpeg'
+
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
