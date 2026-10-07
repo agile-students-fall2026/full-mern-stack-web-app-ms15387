@@ -89,7 +89,8 @@ app.get("/about-us", (req, res) => {
       "In my free time, I like to play and watch sports, video games, analyzing the latest trends with data, build projects, and explore the world!",
       "After this course I hope to gain a better understanding of how to build Full-Stack applications and be more familiar at using GitHub, Git, and Terminal commands"
     ],
-    imageUrl: '${req.protocol:://${req.get("host")}/static/images/mohiuddin_agile_me.jpeg'
+    /* imageUrl: '${req.protocol:://${req.get("host")}/static/images/mohiuddin_agile_me.jpeg' */
+    imageUrl: "http://localhost:5002/static/images/mohiuddin_agile_me",
 
   })
 })
