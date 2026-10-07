@@ -7,7 +7,7 @@ const AboutUs = () => {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_SERVER_HOSTNAME}/about-us`)
             .then((res) => res.json())
-            .then((res) => setData.json())
+            .then((res) => setData(json))
             .catch((err) => setError("Could not load page: " + err.message))
     }, [])
 
